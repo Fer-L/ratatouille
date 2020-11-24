@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ratatouille.model.dao;
 
-/**
- *
- * @author carol
- */
+import ratatouille.model.entity.Receita;
+
 public interface IReceitaDAO {
-    
+    public boolean Salvar(Receita receita);
+    public boolean Apagar(int cod);
+    public Receita Ler(int cod);
+    public boolean Editar(Receita receita);
 }
