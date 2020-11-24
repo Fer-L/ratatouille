@@ -1,9 +1,10 @@
 package ratatouille.model.dao;
 
 import java.sql.Connection;
-import java.util.Date;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import ratatouille.model.entity.Receita;
@@ -19,7 +20,14 @@ public class ReceitaDAO implements IReceitaDAO{
     public boolean Salvar(Receita receita) {
         Connection conn = connFactory.getConnection();
         
-        String comando = "INSERT INTO receitas VALUES (?,?,?,?,?,?,?)";
+        String comando = "INSERT INTO receitas (nomeDaReceita, nomeAutor,"
+                + "rendimentoPorcao, categoria, tempo, passos, ingredientes) "
+                + "VALUES (?,?,?,?,?,?,?)";
+        
+        //pegando localTime a 00h e adicionando a duração da receita
+        LocalTime localTime = LocalTime.MIDNIGHT.plus(receita.getTempo());
+        //convertendo localTime para sqlTime
+        java.sql.Time sqlTime = java.sql.Time.valueOf(localTime);
         
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(comando);
@@ -28,7 +36,7 @@ public class ReceitaDAO implements IReceitaDAO{
             preparedStatement.setString(2, receita.getNomeAutor());
             preparedStatement.setInt(3, receita.getRendimentoPorcao());
             preparedStatement.setString(4, receita.getCategoria());
-            preparedStatement.setDate(5, java.sql.Date.valueOf(receita.getTempo().toString()));
+            preparedStatement.setTime(5, sqlTime);
             preparedStatement.setString(6, receita.getPassos());
             preparedStatement.setString(7, receita.getIngredientes());
 

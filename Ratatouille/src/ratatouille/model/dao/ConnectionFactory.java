@@ -12,7 +12,7 @@ public class ConnectionFactory implements IConnectionFactory {
     public Connection getConnection() {
         String url = "jdbc:mysql://localhost:3306/ratatouille";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(url, "root", "ratocozinheiro");
         } catch (Exception ex) {
             throw new RuntimeException(ex);

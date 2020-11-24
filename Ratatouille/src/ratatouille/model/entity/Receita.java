@@ -1,5 +1,6 @@
 package ratatouille.model.entity;
 
+import java.time.Duration;
 import java.util.Date;
 
 public class Receita {
@@ -8,7 +9,7 @@ public class Receita {
     private String nomeAutor;
     private int rendimentoPorcao;
     private String categoria;
-    private Date tempo;
+    private Duration tempo;
     private String passos;
     private String ingredientes;
 
@@ -52,11 +53,11 @@ public class Receita {
         this.categoria = categoria;
     }
 
-    public Date getTempo() {
+    public Duration getTempo() {
         return tempo;
     }
 
-    public void setTempo(Date tempo) {
+    public void setTempo(Duration tempo) {
         this.tempo = tempo;
     }
 
