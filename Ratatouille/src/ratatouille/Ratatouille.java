@@ -2,8 +2,6 @@
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Date;
-import java.time.Duration;
 import ratatouille.model.dao.ConnectionFactory;
 import ratatouille.model.dao.IConnectionFactory;
 import ratatouille.model.dao.IReceitaDAO;
@@ -24,11 +22,14 @@ public class Ratatouille {
         r.setNomeAutor("Vovó");
         r.setRendimentoPorcao(1);
         r.setCategoria("Doces");
-        r.setTempo( Duration.ofHours(1));
+        r.setTempo(1.0f);
         r.setPassos("aqui vai a receita");
         r.setIngredientes("aqui vao os ingredientes");
         
-        receitaDAO.Salvar(r);
+        //receitaDAO.Salvar(r);
+        //receitaDAO.Apagar(2);
+        //receitaDAO.Editar(r);
+        receitaDAO.Ler(1);
     }
     
 }

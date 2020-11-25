@@ -9,7 +9,7 @@ public class Receita {
     private String nomeAutor;
     private int rendimentoPorcao;
     private String categoria;
-    private Duration tempo;
+    private float tempo;
     private String passos;
     private String ingredientes;
 
@@ -53,11 +53,11 @@ public class Receita {
         this.categoria = categoria;
     }
 
-    public Duration getTempo() {
+    public float getTempo() {
         return tempo;
     }
 
-    public void setTempo(Duration tempo) {
+    public void setTempo(float tempo) {
         this.tempo = tempo;
     }
 
