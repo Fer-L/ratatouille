@@ -5,6 +5,9 @@
  */
 package ratatouille.view;
 
+import Controllers.receitaController;
+import ratatouille.model.entity.Receita;
+
 /**
  *
  * @author carol
@@ -30,22 +33,23 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabelNomeReceita = new javax.swing.JLabel();
-        jTextFieldNomeReceita = new javax.swing.JTextField();
+        nomeDaReceita = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldNomeAutor = new javax.swing.JTextField();
+        nomeDoAutor = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextFieldNomeAutor1 = new javax.swing.JTextField();
+        rendimento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldNomeAutor3 = new javax.swing.JTextField();
-        jTextFieldNomeAutor5 = new javax.swing.JTextField();
+        tempoDePreparo = new javax.swing.JTextField();
         button1 = new java.awt.Button();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jTextFieldNomeAutor6 = new javax.swing.JTextField();
         button2 = new java.awt.Button();
+        categoria = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Ingredientes = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Passos = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -59,12 +63,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabelNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNomeReceita.setText("Nome da receita");
 
-        jTextFieldNomeReceita.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeReceita.setCaretColor(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeReceita.addActionListener(new java.awt.event.ActionListener() {
+        nomeDaReceita.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDaReceita.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDaReceita.setCaretColor(new java.awt.Color(0, 0, 0));
+        nomeDaReceita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeReceitaActionPerformed(evt);
+                nomeDaReceitaActionPerformed(evt);
             }
         });
 
@@ -73,11 +77,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Autor");
 
-        jTextFieldNomeAutor.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeAutor.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeAutor.addActionListener(new java.awt.event.ActionListener() {
+        nomeDoAutor.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDoAutor.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDoAutor.setCaretColor(new java.awt.Color(0, 0, 0));
+        nomeDoAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeAutorActionPerformed(evt);
+                nomeDoAutorActionPerformed(evt);
             }
         });
 
@@ -86,11 +91,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Rendimento (porções)");
 
-        jTextFieldNomeAutor1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeAutor1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeAutor1.addActionListener(new java.awt.event.ActionListener() {
+        rendimento.setBackground(new java.awt.Color(204, 204, 204));
+        rendimento.setForeground(new java.awt.Color(0, 0, 0));
+        rendimento.setCaretColor(new java.awt.Color(0, 0, 0));
+        rendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeAutor1ActionPerformed(evt);
+                rendimentoActionPerformed(evt);
             }
         });
 
@@ -114,19 +120,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Ingredientes");
 
-        jTextFieldNomeAutor3.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeAutor3.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeAutor3.addActionListener(new java.awt.event.ActionListener() {
+        tempoDePreparo.setBackground(new java.awt.Color(204, 204, 204));
+        tempoDePreparo.setForeground(new java.awt.Color(0, 0, 0));
+        tempoDePreparo.setCaretColor(new java.awt.Color(0, 0, 0));
+        tempoDePreparo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeAutor3ActionPerformed(evt);
-            }
-        });
-
-        jTextFieldNomeAutor5.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeAutor5.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeAutor5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeAutor5ActionPerformed(evt);
+                tempoDePreparoActionPerformed(evt);
             }
         });
 
@@ -134,28 +133,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         button1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
         button1.setForeground(new java.awt.Color(255, 255, 255));
         button1.setLabel("Salvar");
-
-        jCheckBox1.setBackground(new java.awt.Color(204, 204, 204));
-        jCheckBox1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox1.setText("Doce");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox2.setBackground(new java.awt.Color(204, 204, 204));
-        jCheckBox2.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        jCheckBox2.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox2.setText("Salgado");
-
-        jTextFieldNomeAutor6.setBackground(new java.awt.Color(204, 204, 204));
-        jTextFieldNomeAutor6.setForeground(new java.awt.Color(0, 0, 0));
-        jTextFieldNomeAutor6.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextFieldNomeAutor6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeAutor6ActionPerformed(evt);
+                button1ActionPerformed(evt);
             }
         });
 
@@ -170,6 +150,32 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
+        categoria.setBackground(new java.awt.Color(204, 204, 204));
+        categoria.setForeground(new java.awt.Color(0, 0, 0));
+        categoria.setCaretColor(new java.awt.Color(0, 0, 0));
+        categoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                categoriaActionPerformed(evt);
+            }
+        });
+
+        Ingredientes.setBackground(new java.awt.Color(204, 204, 204));
+        Ingredientes.setColumns(20);
+        Ingredientes.setRows(5);
+        Ingredientes.setBorder(null);
+        Ingredientes.setCaretColor(new java.awt.Color(0, 0, 0));
+        Ingredientes.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Ingredientes.setDoubleBuffered(true);
+        Ingredientes.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jScrollPane1.setViewportView(Ingredientes);
+
+        Passos.setBackground(new java.awt.Color(204, 204, 204));
+        Passos.setColumns(20);
+        Passos.setRows(5);
+        Passos.setCaretColor(new java.awt.Color(0, 0, 0));
+        Passos.setMargin(new java.awt.Insets(0, 5, 0, 0));
+        jScrollPane2.setViewportView(Passos);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -180,13 +186,6 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel6)
-                                .addGap(144, 144, 144)
-                                .addComponent(jCheckBox1)
-                                .addGap(77, 77, 77)
-                                .addComponent(jCheckBox2))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
                                 .addComponent(jLabel8))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -194,31 +193,35 @@ public class TelaCadastro extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(27, 27, 27)
                                         .addComponent(jLabel9))
-                                    .addComponent(jLabel5))
+                                    .addComponent(jLabel5)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addComponent(jLabel6))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(44, 44, 44)
+                                        .addComponent(jLabel7)))
                                 .addGap(64, 64, 64)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldNomeAutor1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldNomeAutor6, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldNomeAutor3, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldNomeAutor5, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldNomeAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldNomeReceita, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(categoria, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                    .addComponent(rendimento, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                    .addComponent(tempoDePreparo, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                    .addComponent(nomeDoAutor, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                    .addComponent(nomeDaReceita, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(jScrollPane2)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jLabelNomeReceita))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel7)))
+                        .addComponent(jLabelNomeReceita)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(72, 72, 72))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(265, 265, 265)
+                .addGap(267, 267, 267)
                 .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(29, 29, 29)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -232,43 +235,39 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNomeReceita)
-                    .addComponent(jTextFieldNomeReceita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeDaReceita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextFieldNomeAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeDoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextFieldNomeAutor1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel6)
+                    .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(jTextFieldNomeAutor5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(74, 74, 74))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextFieldNomeAutor3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(74, 74, 74)
                         .addComponent(jLabel7)
-                        .addGap(211, 211, 211))
+                        .addGap(121, 121, 121))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextFieldNomeAutor6, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(147, 147, 147))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47))
         );
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 0, 24)); // NOI18N
@@ -295,7 +294,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
@@ -303,37 +302,43 @@ public class TelaCadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldNomeReceitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeReceitaActionPerformed
+    private void nomeDaReceitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeDaReceitaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeReceitaActionPerformed
+    }//GEN-LAST:event_nomeDaReceitaActionPerformed
 
-    private void jTextFieldNomeAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeAutorActionPerformed
+    private void nomeDoAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeDoAutorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeAutorActionPerformed
+    }//GEN-LAST:event_nomeDoAutorActionPerformed
 
-    private void jTextFieldNomeAutor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeAutor1ActionPerformed
+    private void rendimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rendimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeAutor1ActionPerformed
+    }//GEN-LAST:event_rendimentoActionPerformed
 
-    private void jTextFieldNomeAutor3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeAutor3ActionPerformed
+    private void tempoDePreparoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempoDePreparoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeAutor3ActionPerformed
-
-    private void jTextFieldNomeAutor5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeAutor5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeAutor5ActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jTextFieldNomeAutor6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeAutor6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeAutor6ActionPerformed
+    }//GEN-LAST:event_tempoDePreparoActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_button2ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        Receita receita = new Receita();
+        receita.setNomeDaReceita(nomeDaReceita.getText());
+        receita.setNomeAutor(nomeDoAutor.getText());
+        receita.setRendimentoPorcao(Integer.valueOf(rendimento.getText()));
+        receita.setTempo(Float.valueOf(rendimento.getText()));
+        receita.setCategoria(categoria.getText());
+        receita.setPassos(Passos.getText());
+        receita.setIngredientes(Ingredientes.getText());
+       
+        receitaController controllerReceita = new receitaController();
+        controllerReceita.cadastrarReceita(receita);
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_categoriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -371,10 +376,11 @@ public class TelaCadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Ingredientes;
+    private javax.swing.JTextArea Passos;
     private java.awt.Button button1;
     private java.awt.Button button2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JTextField categoria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -385,11 +391,11 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelNomeReceita;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextFieldNomeAutor;
-    private javax.swing.JTextField jTextFieldNomeAutor1;
-    private javax.swing.JTextField jTextFieldNomeAutor3;
-    private javax.swing.JTextField jTextFieldNomeAutor5;
-    private javax.swing.JTextField jTextFieldNomeAutor6;
-    private javax.swing.JTextField jTextFieldNomeReceita;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField nomeDaReceita;
+    private javax.swing.JTextField nomeDoAutor;
+    private javax.swing.JTextField rendimento;
+    private javax.swing.JTextField tempoDePreparo;
     // End of variables declaration//GEN-END:variables
 }

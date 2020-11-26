@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import ratatouille.model.entity.Receita;
@@ -23,9 +25,7 @@ public class ReceitaDAO implements IReceitaDAO{
         String comando = "INSERT INTO receitas (nomeDaReceita, nomeAutor,"
                 + "rendimentoPorcao, categoria, tempo, passos, ingredientes) "
                 + "VALUES (?,?,?,?,?,?,?)";
-        
-        
-        
+       
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(comando);
             
@@ -48,15 +48,15 @@ public class ReceitaDAO implements IReceitaDAO{
         return false;
     }
 
-
     public boolean Apagar(int cod) {
         Connection conn = connFactory.getConnection();
         String comando = "delete from receitas where cod = ?";
        
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(comando);
-            preparedStatement.setInt(1, cod);  
             
+            preparedStatement.setInt(1, cod);
+                        
             preparedStatement.execute();
             
             return true;
@@ -70,23 +70,22 @@ public class ReceitaDAO implements IReceitaDAO{
          
     }
 
-
-
-
-    
     public Receita Ler(int cod) {
         
         Connection conn = connFactory.getConnection();
-        String comando = "select * from receitas";  
+        String comando = "select * from receitas where cod = ?";  
         Receita receita = new Receita();
         
         try { 
-            Statement statement = conn.createStatement();
-            ResultSet resultSet = statement.executeQuery(comando);
+            
+            PreparedStatement preparedStatement = conn.prepareStatement(comando);
+            
+            preparedStatement.setInt(1, cod);
+            
+            ResultSet resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
-                
-                  
+                                  
                   receita.setNomeDaReceita(resultSet.getString("nomeDaReceita"));
                   receita.setNomeAutor(resultSet.getString("nomeAutor"));
                   receita.setRendimentoPorcao(resultSet.getInt("rendimentoPorcao"));
@@ -94,12 +93,10 @@ public class ReceitaDAO implements IReceitaDAO{
                   receita.setTempo(resultSet.getFloat("tempo"));
                   receita.setPassos(resultSet.getString("passos"));
                   receita.setIngredientes(resultSet.getString("ingredientes"));
-                  
-               
-                
+                                  
             } 
             
-            statement.close();
+            preparedStatement.close();
             
             return receita;
            
@@ -113,8 +110,6 @@ public class ReceitaDAO implements IReceitaDAO{
         return receita;
     }
    
-
-
     public boolean Editar(Receita receita) {
         
         Connection conn = connFactory.getConnection();
@@ -148,4 +143,46 @@ public class ReceitaDAO implements IReceitaDAO{
         return false;
         
     }
+    
+    public List<Receita> LerTodasReceitas() {
+             
+        Connection conn = connFactory.getConnection();
+        String comando = "select * from receitas";  
+        List<Receita> receitas = new ArrayList();
+        
+        try { 
+            
+            PreparedStatement preparedStatement = conn.prepareStatement(comando);
+                      
+            ResultSet resultSet = preparedStatement.executeQuery();
+            
+            while(resultSet.next()){
+                           
+                Receita receita = new Receita();    
+                
+                receita.setNomeDaReceita(resultSet.getString("nomeDaReceita"));
+                receita.setNomeAutor(resultSet.getString("nomeAutor"));
+                receita.setRendimentoPorcao(resultSet.getInt("rendimentoPorcao"));
+                receita.setCategoria(resultSet.getString("categoria"));
+                receita.setTempo(resultSet.getFloat("tempo"));
+                receita.setPassos(resultSet.getString("passos"));
+                receita.setIngredientes(resultSet.getString("ingredientes"));
+                                  
+                receitas.add(receita);
+            } 
+            
+            preparedStatement.close();
+            
+            return receitas;
+           
+        } catch (SQLException ex) {
+            Logger.getLogger(ReceitaDAO.class.getName()).log(Level.SEVERE, 
+                    null, ex);
+           
+        }
+        connFactory.closeConnection(conn);
+            
+        return receitas;
+    }
+
 }

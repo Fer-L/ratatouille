@@ -46,7 +46,7 @@
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="561" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="53" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -70,33 +70,34 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextFieldNomeAutor1" min="-2" pref="303" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldNomeAutor6" min="-2" pref="303" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldNomeAutor3" min="-2" pref="303" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldNomeAutor5" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldNomeAutor" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldNomeReceita" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="categoria" pref="303" max="32767" attributes="0"/>
+                                      <Component id="rendimento" pref="303" max="32767" attributes="0"/>
+                                      <Component id="tempoDePreparo" alignment="0" pref="303" max="32767" attributes="0"/>
+                                      <Component id="nomeDoAutor" alignment="0" pref="303" max="32767" attributes="0"/>
+                                      <Component id="nomeDaReceita" alignment="0" pref="303" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane2" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -109,19 +110,15 @@
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Component id="jLabelNomeReceita" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <EmptySpace pref="115" max="32767" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
                   <Component id="button2" min="-2" pref="86" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="button1" min="-2" pref="86" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -138,55 +135,48 @@
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabelNomeReceita" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldNomeReceita" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomeDaReceita" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldNomeAutor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nomeDoAutor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldNomeAutor1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="rendimento" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="categoria" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextFieldNomeAutor5" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="tempoDePreparo" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jTextFieldNomeAutor3" min="-2" pref="101" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jTextFieldNomeAutor6" min="-2" pref="113" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="button1" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="button2" min="-2" pref="33" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="button2" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="button1" min="-2" pref="33" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -205,7 +195,7 @@
             <Property name="text" type="java.lang.String" value="Nome da receita"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeReceita">
+        <Component class="javax.swing.JTextField" name="nomeDaReceita">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -218,7 +208,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeReceitaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeDaReceitaActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -235,7 +225,7 @@
             <Property name="text" type="java.lang.String" value="Autor"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeAutor">
+        <Component class="javax.swing.JTextField" name="nomeDoAutor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -243,9 +233,12 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeAutorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeDoAutorActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -262,7 +255,7 @@
             <Property name="text" type="java.lang.String" value="Rendimento (por&#xe7;&#xf5;es)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeAutor1">
+        <Component class="javax.swing.JTextField" name="rendimento">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -270,9 +263,12 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeAutor1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rendimentoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -331,7 +327,7 @@
             <Property name="text" type="java.lang.String" value="Ingredientes"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeAutor3">
+        <Component class="javax.swing.JTextField" name="tempoDePreparo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -339,22 +335,12 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeAutor3ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeAutor5">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeAutor5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tempoDePreparoActionPerformed"/>
           </Events>
         </Component>
         <Component class="java.awt.Button" name="button1">
@@ -370,52 +356,8 @@
             </Property>
             <Property name="label" type="java.lang.String" value="Salvar"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Kristen ITC" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Doce"/>
-          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Kristen ITC" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Salgado"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldNomeAutor6">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Text Cursor"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldNomeAutor6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="java.awt.Button" name="button2">
@@ -436,6 +378,77 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JTextField" name="categoria">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="categoriaActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="Ingredientes">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                </Property>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
+                <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Cursor de Texto"/>
+                </Property>
+                <Property name="doubleBuffered" type="boolean" value="true"/>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[0, 5, 0, 0]"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="Passos">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                </Property>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                  <Insets value="[0, 5, 0, 0]"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
