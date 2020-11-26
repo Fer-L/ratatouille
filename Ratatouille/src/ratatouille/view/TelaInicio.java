@@ -5,7 +5,9 @@
  */
 package ratatouille.view;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -13,11 +15,12 @@ import java.awt.event.ActionListener;
  */
 public class TelaInicio extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaInicio
-     */
+    
+    
+    
     public TelaInicio() {
         initComponents();
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     /**
@@ -38,14 +41,12 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuOpcoes = new javax.swing.JMenu();
         jMenuItemCadastro = new javax.swing.JMenuItem();
         jMenuItemConsulta = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuSair = new javax.swing.JMenu();
+        jMenuItemSair = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ratatouille");
         setForeground(java.awt.Color.white);
         setIconImages(null);
@@ -89,45 +90,52 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuOpcoes.setBackground(new java.awt.Color(51, 51, 51));
         jMenuOpcoes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenuOpcoes.setForeground(new java.awt.Color(255, 255, 255));
+        jMenuOpcoes.setForeground(new java.awt.Color(0, 0, 0));
         jMenuOpcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/rato.png"))); // NOI18N
         jMenuOpcoes.setText("Opções");
         jMenuOpcoes.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
 
+        jMenuItemCadastro.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItemCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
         jMenuItemCadastro.setText("Cadastrar receita");
-        jMenuOpcoes.add(jMenuItemCadastro);
-
-        jMenuItemConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
-        jMenuItemConsulta.setText("Consultar receita");
-        jMenuOpcoes.add(jMenuItemConsulta);
-
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
-        jMenu1.setText("Editar receita");
-
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
-        jMenuItem4.setText("Alterar receita");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItemCadastroActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        jMenuOpcoes.add(jMenuItemCadastro);
 
+        jMenuItemConsulta.setForeground(new java.awt.Color(0, 0, 0));
+        jMenuItemConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
+        jMenuItemConsulta.setText("Consultar receita");
+        jMenuItemConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConsultaActionPerformed(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenuItemConsulta);
+
+        jMenuItem2.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
-        jMenuItem2.setText("Excluir receita");
-        jMenu1.add(jMenuItem2);
+        jMenuItem2.setText("Editar receita");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenuItem2);
 
-        jMenuOpcoes.add(jMenu1);
+        jMenuItemSair.setForeground(new java.awt.Color(0, 0, 0));
+        jMenuItemSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta-direita.png"))); // NOI18N
+        jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
+        jMenuOpcoes.add(jMenuItemSair);
 
         jMenuBar1.add(jMenuOpcoes);
-
-        jMenuSair.setBackground(new java.awt.Color(51, 51, 51));
-        jMenuSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenuSair.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuSair.setText("     Sair     ");
-        jMenuSair.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
-        jMenuBar1.add(jMenuSair);
 
         setJMenuBar(jMenuBar1);
 
@@ -135,9 +143,31 @@ public class TelaInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    private void jMenuItemCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastroActionPerformed
+        
+        TelaCadastro telaCadastro = new TelaCadastro();
+        telaCadastro.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItemCadastroActionPerformed
+
+    private void jMenuItemConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaActionPerformed
+        
+        TelaTabela telaMostra = new TelaTabela();
+        telaMostra.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItemConsultaActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        
+        TelaTabela telaMostra = new TelaTabela();
+        telaMostra.setVisible(true);
+        dispose();
+                    
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,15 +208,13 @@ public class TelaInicio extends javax.swing.JFrame {
     private java.awt.Canvas canvas1;
     private javax.swing.JLabel jLabel1Logo;
     private javax.swing.JLabel jLabelLogo;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemCadastro;
     private javax.swing.JMenuItem jMenuItemConsulta;
+    private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenu jMenuOpcoes;
-    private javax.swing.JMenu jMenuSair;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

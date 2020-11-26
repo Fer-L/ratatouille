@@ -93,4 +93,12 @@ public class Receita {
     public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
+    
+    public Object[] obterDados(){
+        return new Object[]{nomeDaReceita, nomeAutor, 
+            Integer.toString(rendimentoPorcao),categoria, Float.toString(tempo),
+            ingredientes, passos, Integer.toString(cod)};
+            
+        
+    } 
 }

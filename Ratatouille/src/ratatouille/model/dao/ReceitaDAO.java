@@ -167,6 +167,7 @@ public class ReceitaDAO implements IReceitaDAO{
                 receita.setTempo(resultSet.getFloat("tempo"));
                 receita.setPassos(resultSet.getString("passos"));
                 receita.setIngredientes(resultSet.getString("ingredientes"));
+                receita.setCod(resultSet.getInt("cod"));
                                   
                 receitas.add(receita);
             } 

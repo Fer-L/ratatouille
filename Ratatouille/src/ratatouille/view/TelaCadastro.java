@@ -6,6 +6,7 @@
 package ratatouille.view;
 
 import Controllers.receitaController;
+import javax.swing.WindowConstants;
 import ratatouille.model.entity.Receita;
 
 /**
@@ -19,6 +20,7 @@ public class TelaCadastro extends javax.swing.JFrame {
      */
     public TelaCadastro() {
         initComponents();
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     /**
@@ -44,7 +46,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         tempoDePreparo = new javax.swing.JTextField();
         button1 = new java.awt.Button();
-        button2 = new java.awt.Button();
+        buttonVoltar = new java.awt.Button();
         categoria = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         Ingredientes = new javax.swing.JTextArea();
@@ -139,14 +141,14 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        button2.setActionCommand("Voltar");
-        button2.setBackground(new java.awt.Color(102, 102, 102));
-        button2.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        button2.setForeground(new java.awt.Color(0, 0, 0));
-        button2.setLabel("Voltar");
-        button2.addActionListener(new java.awt.event.ActionListener() {
+        buttonVoltar.setActionCommand("Voltar");
+        buttonVoltar.setBackground(new java.awt.Color(102, 102, 102));
+        buttonVoltar.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        buttonVoltar.setForeground(new java.awt.Color(0, 0, 0));
+        buttonVoltar.setLabel("Voltar");
+        buttonVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button2ActionPerformed(evt);
+                buttonVoltarActionPerformed(evt);
             }
         });
 
@@ -221,7 +223,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGap(72, 72, 72))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(267, 267, 267)
-                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -266,7 +268,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47))
         );
@@ -319,9 +321,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tempoDePreparoActionPerformed
 
-    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button2ActionPerformed
+    private void buttonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonVoltarActionPerformed
+         
+       TelaInicio telaInicio = new TelaInicio();
+       telaInicio.setVisible(true);
+       dispose();  
+    }//GEN-LAST:event_buttonVoltarActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         Receita receita = new Receita();
@@ -380,7 +385,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JTextArea Ingredientes;
     private javax.swing.JTextArea Passos;
     private java.awt.Button button1;
-    private java.awt.Button button2;
+    private java.awt.Button buttonVoltar;
     private javax.swing.JTextField categoria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

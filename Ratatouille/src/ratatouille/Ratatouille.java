@@ -11,6 +11,7 @@ import ratatouille.model.dao.IReceitaDAO;
 import ratatouille.model.dao.ReceitaDAO;
 import ratatouille.model.entity.Receita;
 import ratatouille.view.TelaCadastro;
+import ratatouille.view.TelaInicio;
 
 
 public class Ratatouille {
@@ -32,8 +33,11 @@ public class Ratatouille {
         r.setIngredientes("aqui vao os ingredientes");
         
         
-        TelaCadastro telacadastro = new TelaCadastro();
-        telacadastro.setVisible(true);
+//        TelaCadastro telacadastro = new TelaCadastro();
+//        telacadastro.setVisible(true);
+        
+        TelaInicio telaInicio = new TelaInicio();
+        telaInicio.setVisible(true);
         
 //        receitaDAO.Salvar(r);
 //        receitaDAO.Editar(r);
