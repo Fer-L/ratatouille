@@ -49,7 +49,6 @@ public class TelaInicio extends javax.swing.JFrame {
         setTitle("Ratatouille");
         setForeground(java.awt.Color.white);
         setIconImages(null);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(canvas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, -1, -1));
 
@@ -88,7 +87,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 780, 550));
 
-        jMenuOpcoes.setBackground(new java.awt.Color(87, 63, 48));
+        jMenuOpcoes.setBackground(new java.awt.Color(51, 51, 51));
         jMenuOpcoes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jMenuOpcoes.setForeground(new java.awt.Color(255, 255, 255));
         jMenuOpcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/rato.png"))); // NOI18N
@@ -123,10 +122,10 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuOpcoes);
 
-        jMenuSair.setBackground(new java.awt.Color(87, 63, 48));
+        jMenuSair.setBackground(new java.awt.Color(51, 51, 51));
         jMenuSair.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jMenuSair.setForeground(new java.awt.Color(255, 255, 255));
-        jMenuSair.setText("Sair");
+        jMenuSair.setText("     Sair     ");
         jMenuSair.setFont(new java.awt.Font("Kristen ITC", 0, 18)); // NOI18N
         jMenuBar1.add(jMenuSair);
 

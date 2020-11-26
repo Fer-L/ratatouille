@@ -61,7 +61,7 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         jLabelNomeReceita.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabelNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
-        jLabelNomeReceita.setText("Nome da receita");
+        jLabelNomeReceita.setText("Nome da receita *");
 
         nomeDaReceita.setBackground(new java.awt.Color(204, 204, 204));
         nomeDaReceita.setForeground(new java.awt.Color(0, 0, 0));
@@ -75,7 +75,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Autor");
+        jLabel4.setText("Autor ");
 
         nomeDoAutor.setBackground(new java.awt.Color(204, 204, 204));
         nomeDoAutor.setForeground(new java.awt.Color(0, 0, 0));
@@ -89,7 +89,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Rendimento (porções)");
+        jLabel5.setText("Rendimento (porções) *");
 
         rendimento.setBackground(new java.awt.Color(204, 204, 204));
         rendimento.setForeground(new java.awt.Color(0, 0, 0));
@@ -103,12 +103,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Categoria ");
+        jLabel6.setText("Categoria * ");
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Passos");
+        jLabel7.setText("Passos *");
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
@@ -118,7 +118,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Ingredientes");
+        jLabel9.setText("Ingredientes *");
 
         tempoDePreparo.setBackground(new java.awt.Color(204, 204, 204));
         tempoDePreparo.setForeground(new java.awt.Color(0, 0, 0));
@@ -129,9 +129,9 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        button1.setBackground(new java.awt.Color(0, 0, 0));
+        button1.setBackground(new java.awt.Color(102, 102, 102));
         button1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        button1.setForeground(new java.awt.Color(255, 255, 255));
+        button1.setForeground(new java.awt.Color(0, 0, 0));
         button1.setLabel("Salvar");
         button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,9 +140,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         });
 
         button2.setActionCommand("Voltar");
-        button2.setBackground(new java.awt.Color(0, 0, 0));
+        button2.setBackground(new java.awt.Color(102, 102, 102));
         button2.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        button2.setForeground(new java.awt.Color(255, 255, 255));
+        button2.setForeground(new java.awt.Color(0, 0, 0));
         button2.setLabel("Voltar");
         button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,10 +161,11 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         Ingredientes.setBackground(new java.awt.Color(204, 204, 204));
         Ingredientes.setColumns(20);
+        Ingredientes.setForeground(new java.awt.Color(0, 0, 0));
         Ingredientes.setRows(5);
         Ingredientes.setBorder(null);
         Ingredientes.setCaretColor(new java.awt.Color(0, 0, 0));
-        Ingredientes.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Ingredientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Ingredientes.setDoubleBuffered(true);
         Ingredientes.setMargin(new java.awt.Insets(0, 5, 0, 0));
         jScrollPane1.setViewportView(Ingredientes);
@@ -286,7 +287,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
