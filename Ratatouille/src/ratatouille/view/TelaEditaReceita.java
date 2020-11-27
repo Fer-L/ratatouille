@@ -23,17 +23,17 @@ public class TelaEditaReceita extends javax.swing.JFrame {
     public TelaEditaReceita(Receita receita) {
         initComponents();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        
-        
-     Ingredientes.setText(receita.getIngredientes());
-     Passos.setText(receita.getPassos());
-     categoria.setText(receita.getCategoria());
-     nomeDoAutor.setText(receita.getNomeAutor());
-     nomeDaReceita.setText(receita.getNomeDaReceita());
-     rendimento.setText(Integer.toString(receita.getRendimentoPorcao()));
-     tempoDePreparo.setText(Float.toString(receita.getTempo()));
-     
-     this.receita = receita;
+
+
+        Ingredientes.setText(receita.getIngredientes());
+        Passos.setText(receita.getPassos());
+        categoria.setText(receita.getCategoria());
+        nomeDoAutor.setText(receita.getNomeAutor());
+        nomeDaReceita.setText(receita.getNomeDaReceita());
+        rendimento.setText(Integer.toString(receita.getRendimentoPorcao()));
+        tempoDePreparo.setText(Float.toString(receita.getTempo()));
+
+        this.receita = receita;
     }
 
     private TelaEditaReceita() {
@@ -79,8 +79,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 236, 193));
         jPanel1.setFocusable(false);
 
-        nomeDaReceita.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDaReceita.setBackground(new java.awt.Color(255, 255, 255));
         nomeDaReceita.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDaReceita.setToolTipText("ex: \"Bolo de chocolate'");
         nomeDaReceita.setCaretColor(new java.awt.Color(0, 0, 0));
         nomeDaReceita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,8 +94,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Autor ");
 
-        nomeDoAutor.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDoAutor.setBackground(new java.awt.Color(255, 255, 255));
         nomeDoAutor.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDoAutor.setToolTipText("ex: \"mamãe\"");
         nomeDoAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeDoAutorActionPerformed(evt);
@@ -106,8 +108,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Rendimento (porções) *");
 
-        rendimento.setBackground(new java.awt.Color(204, 204, 204));
+        rendimento.setBackground(new java.awt.Color(255, 255, 255));
         rendimento.setForeground(new java.awt.Color(0, 0, 0));
+        rendimento.setToolTipText("ex: \"1\"");
         rendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rendimentoActionPerformed(evt);
@@ -134,8 +137,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Ingredientes *");
 
-        tempoDePreparo.setBackground(new java.awt.Color(204, 204, 204));
+        tempoDePreparo.setBackground(new java.awt.Color(255, 255, 255));
         tempoDePreparo.setForeground(new java.awt.Color(0, 0, 0));
+        tempoDePreparo.setToolTipText("ex: \"1.5\"");
         tempoDePreparo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tempoDePreparoActionPerformed(evt);
@@ -158,22 +162,25 @@ public class TelaEditaReceita extends javax.swing.JFrame {
             }
         });
 
-        categoria.setBackground(new java.awt.Color(204, 204, 204));
+        categoria.setBackground(new java.awt.Color(255, 255, 255));
         categoria.setForeground(new java.awt.Color(0, 0, 0));
+        categoria.setToolTipText("ex: \"doce\"");
         categoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 categoriaActionPerformed(evt);
             }
         });
 
-        Ingredientes.setBackground(new java.awt.Color(204, 204, 204));
+        Ingredientes.setBackground(new java.awt.Color(255, 255, 255));
         Ingredientes.setColumns(20);
         Ingredientes.setRows(5);
+        Ingredientes.setToolTipText("ex: \"2 colheres de sopa de manteiga...\"");
         jScrollPane1.setViewportView(Ingredientes);
 
-        Passos.setBackground(new java.awt.Color(204, 204, 204));
+        Passos.setBackground(new java.awt.Color(255, 255, 255));
         Passos.setColumns(20);
         Passos.setRows(5);
+        Passos.setToolTipText("ex: \"Coloque os outros ingredientes, sendo o fermento o último...\"");
         jScrollPane2.setViewportView(Passos);
 
         button4Salvar.setActionCommand("Salvar");
@@ -352,8 +359,6 @@ public class TelaEditaReceita extends javax.swing.JFrame {
     private void button4SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4SalvarActionPerformed
 
         if (validaCadastro()){
-           
-            Receita receita = new Receita();
         
             receita.setNomeDaReceita(nomeDaReceita.getText());
             receita.setNomeAutor(nomeDoAutor.getText());
@@ -364,7 +369,7 @@ public class TelaEditaReceita extends javax.swing.JFrame {
             receita.setIngredientes(Ingredientes.getText());
        
             receitaController controllerReceita = new receitaController();
-            controllerReceita.cadastrarReceita(receita);
+            controllerReceita.EditarReceita(receita);
                 
           
             nomeDaReceita.setText("");

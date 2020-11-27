@@ -76,7 +76,7 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         jPanel1.setFocusable(false);
 
         jTextFieldNomeReceita.setEditable(false);
-        jTextFieldNomeReceita.setBackground(new java.awt.Color(204, 204, 204));
+        jTextFieldNomeReceita.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldNomeReceita.setCaretColor(new java.awt.Color(0, 0, 0));
         jTextFieldNomeReceita.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         jLabel4.setText("Autor");
 
         jTextFieldNomeAutor.setEditable(false);
-        jTextFieldNomeAutor.setBackground(new java.awt.Color(204, 204, 204));
+        jTextFieldNomeAutor.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNomeAutor.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldNomeAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +134,7 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         jLabel9.setText("Ingredientes");
 
         jTextFieldTempo.setEditable(false);
-        jTextFieldTempo.setBackground(new java.awt.Color(204, 204, 204));
+        jTextFieldTempo.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldTempo.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldTempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,13 +167,13 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         });
 
         jTextAreaIngredientes.setEditable(false);
-        jTextAreaIngredientes.setBackground(new java.awt.Color(255, 236, 193));
+        jTextAreaIngredientes.setBackground(new java.awt.Color(255, 255, 255));
         jTextAreaIngredientes.setColumns(20);
         jTextAreaIngredientes.setRows(5);
         jScrollPane1.setViewportView(jTextAreaIngredientes);
 
         jTextAreaPassos.setEditable(false);
-        jTextAreaPassos.setBackground(new java.awt.Color(255, 236, 193));
+        jTextAreaPassos.setBackground(new java.awt.Color(255, 255, 255));
         jTextAreaPassos.setColumns(20);
         jTextAreaPassos.setRows(5);
         jScrollPane2.setViewportView(jTextAreaPassos);

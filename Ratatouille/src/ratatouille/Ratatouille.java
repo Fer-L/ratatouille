@@ -12,9 +12,6 @@ public class Ratatouille {
 
         TelaInicio telaInicio = new TelaInicio();
         telaInicio.setVisible(true);
-//        
-
-
     }
     
 }

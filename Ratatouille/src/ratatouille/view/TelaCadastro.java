@@ -71,8 +71,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabelNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNomeReceita.setText("Nome da receita *");
 
-        nomeDaReceita.setBackground(new java.awt.Color(255, 236, 193));
+        nomeDaReceita.setBackground(new java.awt.Color(255, 255, 255));
         nomeDaReceita.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDaReceita.setToolTipText("ex: \"Bolo de chocolate\"");
         nomeDaReceita.setCaretColor(new java.awt.Color(0, 0, 0));
         nomeDaReceita.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +86,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Autor ");
 
-        nomeDoAutor.setBackground(new java.awt.Color(255, 236, 193));
+        nomeDoAutor.setBackground(new java.awt.Color(255, 255, 255));
         nomeDoAutor.setForeground(new java.awt.Color(0, 0, 0));
+        nomeDoAutor.setToolTipText("ex: \"Mamãe\"");
         nomeDoAutor.setCaretColor(new java.awt.Color(0, 0, 0));
         nomeDoAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,8 +101,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Rendimento (porções) *");
 
-        rendimento.setBackground(new java.awt.Color(255, 236, 193));
+        rendimento.setBackground(new java.awt.Color(255, 255, 255));
         rendimento.setForeground(new java.awt.Color(0, 0, 0));
+        rendimento.setToolTipText("ex: \"1\"");
         rendimento.setCaretColor(new java.awt.Color(0, 0, 0));
         rendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,8 +131,9 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Ingredientes *");
 
-        tempoDePreparo.setBackground(new java.awt.Color(255, 236, 193));
+        tempoDePreparo.setBackground(new java.awt.Color(255, 255, 255));
         tempoDePreparo.setForeground(new java.awt.Color(0, 0, 0));
+        tempoDePreparo.setToolTipText("ex: \"1.5\"");
         tempoDePreparo.setCaretColor(new java.awt.Color(0, 0, 0));
         tempoDePreparo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,8 +162,9 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        categoria.setBackground(new java.awt.Color(255, 236, 193));
+        categoria.setBackground(new java.awt.Color(255, 255, 255));
         categoria.setForeground(new java.awt.Color(0, 0, 0));
+        categoria.setToolTipText("ex: \"doce\"");
         categoria.setCaretColor(new java.awt.Color(0, 0, 0));
         categoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,10 +172,12 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        Ingredientes.setBackground(new java.awt.Color(255, 236, 193));
+        Ingredientes.setBackground(new java.awt.Color(255, 255, 255));
         Ingredientes.setColumns(20);
         Ingredientes.setForeground(new java.awt.Color(0, 0, 0));
         Ingredientes.setRows(5);
+        Ingredientes.setToolTipText("\"ex: 1 xícara de chá de leite...\"");
+        Ingredientes.setWrapStyleWord(true);
         Ingredientes.setBorder(null);
         Ingredientes.setCaretColor(new java.awt.Color(0, 0, 0));
         Ingredientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -178,15 +185,16 @@ public class TelaCadastro extends javax.swing.JFrame {
         Ingredientes.setMargin(new java.awt.Insets(0, 5, 0, 0));
         jScrollPane1.setViewportView(Ingredientes);
 
-        Passos.setBackground(new java.awt.Color(255, 236, 193));
+        Passos.setBackground(new java.awt.Color(255, 255, 255));
         Passos.setColumns(20);
         Passos.setRows(5);
+        Passos.setToolTipText("ex: \"Coloque os líquidos no liquidificador e bata até misturar bem...\"");
         Passos.setCaretColor(new java.awt.Color(0, 0, 0));
         Passos.setMargin(new java.awt.Insets(0, 1, 0, 0));
         jScrollPane2.setViewportView(Passos);
 
         validacao.setEditable(false);
-        validacao.setBackground(new java.awt.Color(255, 255, 255));
+        validacao.setBackground(new java.awt.Color(255, 236, 193));
         validacao.setForeground(new java.awt.Color(0, 204, 0));
         validacao.setToolTipText("");
         validacao.setBorder(null);
@@ -221,16 +229,16 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(72, 72, 72))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(248, 248, 248)
-                .addComponent(validacao, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(245, 245, 245))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(validacao, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(260, 260, 260))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,9 +338,7 @@ public class TelaCadastro extends javax.swing.JFrame {
        dispose();  
     }//GEN-LAST:event_buttonVoltarActionPerformed
     
-    private boolean validaCadastro(){
-        System.out.println(nomeDaReceita.getText());
-        
+    private boolean validaCadastro(){      
         if (!nomeDaReceita.getText().isEmpty()){
             if (!rendimento.getText().isEmpty() ){
                 if (!Passos.getText().isEmpty()){
