@@ -70,6 +70,8 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         Passos = new javax.swing.JTextArea();
         button4Salvar = new java.awt.Button();
         validacao = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -200,6 +202,12 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         validacao.setToolTipText("");
         validacao.setBorder(null);
 
+        jLabel2.setFont(new java.awt.Font("Kristen ITC", 0, 10)); // NOI18N
+        jLabel2.setText("Somente números");
+
+        jLabel10.setFont(new java.awt.Font("Kristen ITC", 0, 10)); // NOI18N
+        jLabel10.setText("Somente números");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -218,11 +226,17 @@ public class TelaEditaReceita extends javax.swing.JFrame {
                             .addComponent(nomeDaReceita, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
                             .addComponent(nomeDoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2))
                             .addComponent(rendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
                             .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel10))
                             .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -253,7 +267,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeDoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -261,7 +277,9 @@ public class TelaEditaReceita extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -343,18 +361,19 @@ public class TelaEditaReceita extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonVoltarActionPerformed
     private boolean validaCadastro(){
         
-        if (!nomeDaReceita.getText().isEmpty()){
-            if (!rendimento.getText().isEmpty() ){
-                if (!Passos.getText().isEmpty()){
-                    if (!categoria.getText().isEmpty()){
-                        if (!Ingredientes.getText().isEmpty()){
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
+        if (nomeDaReceita.getText().isEmpty())
+            return false;
+        if (rendimento.getText().isEmpty() || !rendimento.getText().matches("[0-9]+"))
+            return false;
+        if (Passos.getText().isEmpty())
+            return false;
+        if (categoria.getText().isEmpty())
+            return false;
+        if (Ingredientes.getText().isEmpty())
+            return false;
+        if (!tempoDePreparo.getText().isEmpty() && !tempoDePreparo.getText().matches("[0-9]+"))
+            return false;        
+        return true;
     }
     private void button4SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4SalvarActionPerformed
 
@@ -440,6 +459,8 @@ public class TelaEditaReceita extends javax.swing.JFrame {
     private java.awt.Button buttonVoltar;
     private javax.swing.JTextField categoria;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
