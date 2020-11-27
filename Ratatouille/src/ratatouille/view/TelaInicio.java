@@ -33,10 +33,8 @@ public class TelaInicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
-        canvas1 = new java.awt.Canvas();
         jPanel2 = new javax.swing.JPanel();
-        jLabelLogo = new javax.swing.JLabel();
-        jLabel1Logo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuOpcoes = new javax.swing.JMenu();
         jMenuItemCadastro = new javax.swing.JMenuItem();
@@ -50,43 +48,20 @@ public class TelaInicio extends javax.swing.JFrame {
         setTitle("Ratatouille");
         setForeground(java.awt.Color.white);
         setIconImages(null);
+        setMaximumSize(new java.awt.Dimension(780, 550));
+        setMinimumSize(new java.awt.Dimension(780, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(canvas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 236, 193));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setPreferredSize(new java.awt.Dimension(700, 400));
+        jPanel2.setLayout(null);
 
-        jLabelLogo.setAutoscrolls(true);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/top-view-circular-food-frame-with-vegetables.jpg"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(41, 30, 700, 510);
 
-        jLabel1Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/top-view-circular-food-frame-with-vegetables.jpg"))); // NOI18N
-        jLabel1Logo.setMaximumSize(new java.awt.Dimension(600, 333));
-        jLabel1Logo.setMinimumSize(new java.awt.Dimension(600, 333));
-        jLabel1Logo.setPreferredSize(new java.awt.Dimension(700, 500));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(jLabelLogo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jLabel1Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel1Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1194, 1194, 1194)
-                .addComponent(jLabelLogo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 780, 550));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         jMenuOpcoes.setBackground(new java.awt.Color(51, 51, 51));
         jMenuOpcoes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -205,9 +180,7 @@ public class TelaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Canvas canvas1;
-    private javax.swing.JLabel jLabel1Logo;
-    private javax.swing.JLabel jLabelLogo;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;

@@ -42,10 +42,10 @@ public class ReceitaDAO implements IReceitaDAO{
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(ReceitaDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            connFactory.closeConnection(conn);
+            return false;
         }
-        
-        connFactory.closeConnection(conn);
-        return false;
     }
 
     public boolean Apagar(int cod) {
@@ -117,9 +117,7 @@ public class ReceitaDAO implements IReceitaDAO{
                 + "rendimentoPorcao = ?, categoria = ?,"
                 + "tempo = ?, passos = ?, ingredientes = ?  "
                 + "where cod = ?";
-        
-      
-       
+
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(comando);
             preparedStatement.setString(1, receita.getNomeDaReceita());

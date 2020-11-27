@@ -54,6 +54,7 @@ public class TelaTabela extends javax.swing.JFrame {
         buttonExcluirReceita = new java.awt.Button();
         buttonVoltar = new java.awt.Button();
         buttonLer = new java.awt.Button();
+        buttonLer1 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,6 +113,15 @@ public class TelaTabela extends javax.swing.JFrame {
             }
         });
 
+        buttonLer1.setBackground(new java.awt.Color(153, 153, 153));
+        buttonLer1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        buttonLer1.setLabel("Editar receita");
+        buttonLer1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLer1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,11 +129,13 @@ public class TelaTabela extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(30, 30, 30)
                 .addComponent(buttonExcluirReceita, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(36, 36, 36)
+                .addComponent(buttonLer1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(buttonLer, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(107, 107, 107))
+                .addGap(40, 40, 40))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
@@ -138,7 +150,8 @@ public class TelaTabela extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonExcluirReceita, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonLer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonLer, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonLer1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58))
         );
 
@@ -172,8 +185,7 @@ public class TelaTabela extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonExcluirReceitaActionPerformed
 
     private void buttonLerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLerActionPerformed
-        //selecionando a receita 
-        
+        // Selecionando a receita        
         DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
         receitaController controllerReceita = new receitaController(); 
         Receita receita = new Receita();
@@ -192,6 +204,24 @@ public class TelaTabela extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_buttonLerActionPerformed
+
+    private void buttonLer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLer1ActionPerformed
+        // Selecionando a receita
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        receitaController controllerReceita = new receitaController(); 
+        Receita receita = new Receita();
+
+        int[] indices = jTable1.getSelectedRows();
+       
+        if (indices.length != 0){
+            int id = Integer.valueOf(modelo.getValueAt(indices[0], 7).toString());
+            receita = controllerReceita.LerReceita(id);
+        
+            TelaEditaReceita telaEdita = new TelaEditaReceita(receita);
+            telaEdita.setVisible(true);
+            dispose(); 
+        }
+    }//GEN-LAST:event_buttonLer1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,6 +262,7 @@ public class TelaTabela extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button buttonExcluirReceita;
     private java.awt.Button buttonLer;
+    private java.awt.Button buttonLer1;
     private java.awt.Button buttonVoltar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
