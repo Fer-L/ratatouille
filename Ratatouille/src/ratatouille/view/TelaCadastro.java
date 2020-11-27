@@ -49,7 +49,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         tempoDePreparo = new javax.swing.JTextField();
-        button1 = new java.awt.Button();
+        buttonSalvar = new java.awt.Button();
         buttonVoltar = new java.awt.Button();
         categoria = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -63,14 +63,15 @@ public class TelaCadastro extends javax.swing.JFrame {
         setTitle("Cadastro");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 236, 193));
         jPanel1.setFocusable(false);
+        jPanel1.setPreferredSize(new java.awt.Dimension(552, 640));
 
         jLabelNomeReceita.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabelNomeReceita.setForeground(new java.awt.Color(0, 0, 0));
         jLabelNomeReceita.setText("Nome da receita *");
 
-        nomeDaReceita.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDaReceita.setBackground(new java.awt.Color(255, 236, 193));
         nomeDaReceita.setForeground(new java.awt.Color(0, 0, 0));
         nomeDaReceita.setCaretColor(new java.awt.Color(0, 0, 0));
         nomeDaReceita.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +85,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Autor ");
 
-        nomeDoAutor.setBackground(new java.awt.Color(204, 204, 204));
+        nomeDoAutor.setBackground(new java.awt.Color(255, 236, 193));
         nomeDoAutor.setForeground(new java.awt.Color(0, 0, 0));
         nomeDoAutor.setCaretColor(new java.awt.Color(0, 0, 0));
         nomeDoAutor.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +99,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Rendimento (porções) *");
 
-        rendimento.setBackground(new java.awt.Color(204, 204, 204));
+        rendimento.setBackground(new java.awt.Color(255, 236, 193));
         rendimento.setForeground(new java.awt.Color(0, 0, 0));
         rendimento.setCaretColor(new java.awt.Color(0, 0, 0));
         rendimento.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +128,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Ingredientes *");
 
-        tempoDePreparo.setBackground(new java.awt.Color(204, 204, 204));
+        tempoDePreparo.setBackground(new java.awt.Color(255, 236, 193));
         tempoDePreparo.setForeground(new java.awt.Color(0, 0, 0));
         tempoDePreparo.setCaretColor(new java.awt.Color(0, 0, 0));
         tempoDePreparo.addActionListener(new java.awt.event.ActionListener() {
@@ -136,13 +137,13 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        button1.setBackground(new java.awt.Color(102, 102, 102));
-        button1.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
-        button1.setForeground(new java.awt.Color(0, 0, 0));
-        button1.setLabel("Salvar");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        buttonSalvar.setBackground(new java.awt.Color(102, 102, 102));
+        buttonSalvar.setFont(new java.awt.Font("Kristen ITC", 0, 12)); // NOI18N
+        buttonSalvar.setForeground(new java.awt.Color(0, 0, 0));
+        buttonSalvar.setLabel("Salvar");
+        buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                buttonSalvarActionPerformed(evt);
             }
         });
 
@@ -157,7 +158,7 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        categoria.setBackground(new java.awt.Color(204, 204, 204));
+        categoria.setBackground(new java.awt.Color(255, 236, 193));
         categoria.setForeground(new java.awt.Color(0, 0, 0));
         categoria.setCaretColor(new java.awt.Color(0, 0, 0));
         categoria.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +167,7 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        Ingredientes.setBackground(new java.awt.Color(204, 204, 204));
+        Ingredientes.setBackground(new java.awt.Color(255, 236, 193));
         Ingredientes.setColumns(20);
         Ingredientes.setForeground(new java.awt.Color(0, 0, 0));
         Ingredientes.setRows(5);
@@ -177,7 +178,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         Ingredientes.setMargin(new java.awt.Insets(0, 5, 0, 0));
         jScrollPane1.setViewportView(Ingredientes);
 
-        Passos.setBackground(new java.awt.Color(204, 204, 204));
+        Passos.setBackground(new java.awt.Color(255, 236, 193));
         Passos.setColumns(20);
         Passos.setRows(5);
         Passos.setCaretColor(new java.awt.Color(0, 0, 0));
@@ -200,52 +201,36 @@ public class TelaCadastro extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(229, 229, 229)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel8))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(27, 27, 27)
-                                        .addComponent(jLabel9))
-                                    .addComponent(jLabel5)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addComponent(jLabel6))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addComponent(jLabel7)))
-                                .addGap(64, 64, 64)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(categoria, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                    .addComponent(rendimento, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                    .addComponent(tempoDePreparo, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                    .addComponent(nomeDoAutor, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                    .addComponent(nomeDaReceita, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                    .addComponent(jScrollPane1)
-                                    .addComponent(jScrollPane2)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabelNomeReceita)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
+                    .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNomeReceita)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(categoria)
+                        .addComponent(rendimento)
+                        .addComponent(nomeDoAutor)
+                        .addComponent(nomeDaReceita)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel6)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addGap(72, 72, 72))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(267, 267, 267)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(validacao, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(248, 248, 248)
+                .addComponent(validacao, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(245, 245, 245))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,41 +239,38 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelNomeReceita)
-                    .addComponent(nomeDaReceita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(nomeDoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(rendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel7)
-                        .addGap(121, 121, 121))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(11, 11, 11)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(buttonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelNomeReceita)
+                .addGap(8, 8, 8)
+                .addComponent(nomeDaReceita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeDoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel5)
+                .addGap(12, 12, 12)
+                .addComponent(rendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tempoDePreparo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonSalvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(validacao, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13))
@@ -303,23 +285,22 @@ public class TelaCadastro extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(260, 260, 260))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(13, 13, 13)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -348,20 +329,42 @@ public class TelaCadastro extends javax.swing.JFrame {
        telaInicio.setVisible(true);
        dispose();  
     }//GEN-LAST:event_buttonVoltarActionPerformed
-
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        Receita receita = new Receita();
-        receita.setNomeDaReceita(nomeDaReceita.getText());
-        receita.setNomeAutor(nomeDoAutor.getText());
-        receita.setRendimentoPorcao(Integer.valueOf(rendimento.getText()));
-        receita.setTempo(Float.valueOf(tempoDePreparo.getText()));
-        receita.setCategoria(categoria.getText());
-        receita.setPassos(Passos.getText());
-        receita.setIngredientes(Ingredientes.getText());
+    
+    private boolean validaCadastro(){
+        System.out.println(nomeDaReceita.getText());
+        
+        if (!nomeDaReceita.getText().isEmpty()){
+            if (!rendimento.getText().isEmpty() ){
+                if (!Passos.getText().isEmpty()){
+                    if (!categoria.getText().isEmpty()){
+                        if (!Ingredientes.getText().isEmpty()){
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    
+    private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
+        if (validaCadastro()){
+           
+            Receita receita = new Receita();
+        
+            receita.setNomeDaReceita(nomeDaReceita.getText());
+            receita.setNomeAutor(nomeDoAutor.getText());
+            receita.setRendimentoPorcao(Integer.valueOf(rendimento.getText()));
+            receita.setTempo(Float.valueOf(tempoDePreparo.getText()));
+            receita.setCategoria(categoria.getText());
+            receita.setPassos(Passos.getText());
+            receita.setIngredientes(Ingredientes.getText());
        
-        receitaController controllerReceita = new receitaController();
-        if(controllerReceita.cadastrarReceita(receita)) {
+            receitaController controllerReceita = new receitaController();
+            controllerReceita.cadastrarReceita(receita);
+                
             validacao.setText("Cadastrado com sucesso!");
+            validacao.setForeground(Color.GREEN);
             nomeDaReceita.setText("");
             nomeDoAutor.setText("");
             rendimento.setText("");
@@ -369,12 +372,14 @@ public class TelaCadastro extends javax.swing.JFrame {
             tempoDePreparo.setText("");
             Ingredientes.setText("");
             Passos.setText("");
-            //                timer.sleep(10000);
-        } else {
+
+            
+        }else {
             validacao.setText("Erro ao cadastrar :(");
             validacao.setForeground(Color.RED);
         }
-    }//GEN-LAST:event_button1ActionPerformed
+       
+    }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void categoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriaActionPerformed
         // TODO add your handling code here:
@@ -422,7 +427,7 @@ public class TelaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea Ingredientes;
     private javax.swing.JTextArea Passos;
-    private java.awt.Button button1;
+    private java.awt.Button buttonSalvar;
     private java.awt.Button buttonVoltar;
     private javax.swing.JTextField categoria;
     private javax.swing.JLabel jLabel1;

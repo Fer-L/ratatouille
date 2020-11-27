@@ -93,6 +93,7 @@ public class ReceitaDAO implements IReceitaDAO{
                   receita.setTempo(resultSet.getFloat("tempo"));
                   receita.setPassos(resultSet.getString("passos"));
                   receita.setIngredientes(resultSet.getString("ingredientes"));
+                  receita.setCod(resultSet.getInt("cod"));
                                   
             } 
             
@@ -113,9 +114,14 @@ public class ReceitaDAO implements IReceitaDAO{
     public boolean Editar(Receita receita) {
         
         Connection conn = connFactory.getConnection();
-        String comando = "update receitas set nomeAutor = ?,"
-                + "rendimentoPorcao = ?, categoria = ?,"
-                + "tempo = ?, passos = ?, ingredientes = ?  "
+        String comando = "update receitas set "
+                + "nomeDaReceita = ?,"
+                + "nomeAutor = ?,"
+                + "rendimentoPorcao = ?,"
+                + "categoria = ?,"
+                + "tempo = ?,"
+                + "passos = ?,"
+                + "ingredientes = ?"
                 + "where cod = ?";
 
         try {
@@ -126,7 +132,8 @@ public class ReceitaDAO implements IReceitaDAO{
             preparedStatement.setString(4, receita.getCategoria());
             preparedStatement.setFloat(5, receita.getTempo());
             preparedStatement.setString(6, receita.getPassos());
-            preparedStatement.setString(7, receita.getIngredientes()); 
+            preparedStatement.setString(7, receita.getIngredientes());
+            preparedStatement.setInt(8, receita.getCod());
             
             preparedStatement.executeUpdate();
             return true;
