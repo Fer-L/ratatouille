@@ -1,0 +1,5 @@
+modelo mvc -> dividido em pacotes: 
+	model-> logica da aplicação
+		DAO -> acesso aos dados
+	view -> interface/interação com o usuario
+	controller -> realiza o intermedio entre a camada 		view e a model 

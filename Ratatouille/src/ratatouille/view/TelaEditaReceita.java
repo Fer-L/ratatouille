@@ -135,7 +135,7 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Tempo de preparo");
+        jLabel8.setText("Tempo de preparo *");
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
@@ -392,7 +392,7 @@ public class TelaEditaReceita extends javax.swing.JFrame {
         if (Ingredientes.getText().isEmpty()) {
             return false;
         }
-        if (!tempoDePreparo.getText().isEmpty()){
+        if (tempoDePreparo.getText().isEmpty()){
             if(!tempoDePreparo.getText().matches("^([+-]?\\d\\.?\\d)$")){ 
                 return false;
             }
@@ -410,21 +410,11 @@ public class TelaEditaReceita extends javax.swing.JFrame {
             receita.setCategoria(categoria.getText());
             receita.setPassos(Passos.getText());
             receita.setIngredientes(Ingredientes.getText());
-            if (!tempoDePreparo.getText().isEmpty()){
-                receita.setTempo(Float.valueOf(tempoDePreparo.getText()));    
-             }
-
-            
+            receita.setTempo(Float.valueOf(tempoDePreparo.getText()));    
+             
+ 
             receitaController controllerReceita = new receitaController();
             controllerReceita.EditarReceita(receita);
-
-            nomeDaReceita.setText("");
-            nomeDoAutor.setText("");
-            rendimento.setText("");
-            categoria.setText("");
-            tempoDePreparo.setText("");
-            Ingredientes.setText("");
-            Passos.setText("");
 
             TelaTabela telaTabela = new TelaTabela();
             telaTabela.setVisible(true);

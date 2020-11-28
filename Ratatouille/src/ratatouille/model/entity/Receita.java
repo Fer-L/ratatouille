@@ -13,9 +13,7 @@ public class Receita {
     public Receita(String nomeDaReceita, String nomeAutor, int rendimentoPorcao, 
             String categoria, float tempo, String passos, String ingredientes){
         
-        if (nomeAutor == null) {
-            this.nomeAutor = "Sem autor definido";
-        }
+      
         this.nomeDaReceita = nomeDaReceita;
         this.nomeAutor = nomeAutor;
         this.rendimentoPorcao = rendimentoPorcao;

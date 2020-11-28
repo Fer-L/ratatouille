@@ -112,7 +112,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Tempo de preparo");
+        jLabel8.setText("Tempo de preparo *");
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Kristen ITC", 0, 14)); // NOI18N
@@ -341,23 +341,27 @@ public class TelaCadastro extends javax.swing.JFrame {
     private boolean validaCadastro() {
 
         if (nomeDaReceita.getText().isEmpty()) {
+            System.out.println("alo1");
             return false;
         }
         if (rendimento.getText().isEmpty() || !rendimento.getText().matches("[0-9]+")) {
+            System.out.println("alo2");
             return false;
         }
         if (Passos.getText().isEmpty()) {
+            System.out.println("alo3");
             return false;
         }
         if (categoria.getText().isEmpty()) {
+            System.out.println("alo4");
             return false;
         }
         if (Ingredientes.getText().isEmpty()) {
+            System.out.println("alo5");
             return false;
         }
-        if (!tempoDePreparo.getText().isEmpty()){
-            if(!tempoDePreparo.getText().matches("[0-9]+")){ 
-                System.out.println("alo");
+        if (tempoDePreparo.getText().isEmpty()){
+            if(!tempoDePreparo.getText().matches("^([+-]?\\d\\.?\\d)$")){ 
                 return false;
             }
         }
@@ -376,9 +380,8 @@ public class TelaCadastro extends javax.swing.JFrame {
             receita.setCategoria(categoria.getText());
             receita.setPassos(Passos.getText());
             receita.setIngredientes(Ingredientes.getText());
-            if (!tempoDePreparo.getText().isEmpty()){
-                receita.setTempo(Float.valueOf(tempoDePreparo.getText()));    
-             }
+            receita.setTempo(Float.valueOf(tempoDePreparo.getText()));    
+             
 
             receitaController controllerReceita = new receitaController();
             controllerReceita.cadastrarReceita(receita);
