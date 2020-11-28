@@ -1,8 +1,5 @@
 package ratatouille.model.entity;
 
-import java.time.Duration;
-import java.util.Date;
-
 public class Receita {
     private int cod;
     private String nomeDaReceita;
@@ -13,7 +10,8 @@ public class Receita {
     private String passos;
     private String ingredientes;
 
-    public Receita(String nomeDaReceita, String nomeAutor, int rendimentoPorcao, String categoria, float tempo, String passos, String ingredientes) {
+    public Receita(String nomeDaReceita, String nomeAutor, int rendimentoPorcao, 
+            String categoria, float tempo, String passos, String ingredientes){
         
         if (nomeAutor == null) {
             this.nomeAutor = "Sem autor definido";

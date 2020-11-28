@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import ratatouille.model.entity.Receita;
 
+//classe com os comandos sql
 public class ReceitaDAO implements IReceitaDAO{
     
     private IConnectionFactory connFactory;
@@ -19,6 +19,7 @@ public class ReceitaDAO implements IReceitaDAO{
         connFactory = new ConnectionFactory();
     }
     
+    //metodo para cadastrar as receitas na tabela 
     public boolean Salvar(Receita receita) {
         Connection conn = connFactory.getConnection();
         
@@ -48,6 +49,7 @@ public class ReceitaDAO implements IReceitaDAO{
         }
     }
 
+    //método para excluir as receitas das tabelas
     public boolean Apagar(int cod) {
         Connection conn = connFactory.getConnection();
         String comando = "delete from receitas where cod = ?";
@@ -62,14 +64,14 @@ public class ReceitaDAO implements IReceitaDAO{
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(ReceitaDAO.class.getName()).log(Level.SEVERE, 
-                    null, ex);
-           
+                    null, ex);          
         }
         connFactory.closeConnection(conn);
         return false;
          
     }
-
+    
+    //método para ler uma receita 
     public Receita Ler(int cod) {
         
         Connection conn = connFactory.getConnection();
@@ -111,6 +113,7 @@ public class ReceitaDAO implements IReceitaDAO{
         return receita;
     }
    
+    //método para editar uma receita
     public boolean Editar(Receita receita) {
         
         Connection conn = connFactory.getConnection();
@@ -149,6 +152,7 @@ public class ReceitaDAO implements IReceitaDAO{
         
     }
     
+    //método para o retorno de todas as receitas já cadastradas
     public List<Receita> LerTodasReceitas() {
              
         Connection conn = connFactory.getConnection();
