@@ -374,8 +374,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         if (Ingredientes.getText().isEmpty()) {
             return false;
         }
-        if (!tempoDePreparo.getText().isEmpty() && !tempoDePreparo.getText().matches("[0-9]+")) {
-            return false;
+        if (!tempoDePreparo.getText().isEmpty()){
+            if(!tempoDePreparo.getText().matches("[0-9]+")){ 
+                System.out.println("alo");
+                return false;
+            }
         }
         return true;
     }
@@ -389,10 +392,12 @@ public class TelaCadastro extends javax.swing.JFrame {
             receita.setNomeDaReceita(nomeDaReceita.getText());
             receita.setNomeAutor(nomeDoAutor.getText());
             receita.setRendimentoPorcao(Integer.valueOf(rendimento.getText()));
-            receita.setTempo(Float.valueOf(tempoDePreparo.getText()));
             receita.setCategoria(categoria.getText());
             receita.setPassos(Passos.getText());
             receita.setIngredientes(Ingredientes.getText());
+            if (!tempoDePreparo.getText().isEmpty()){
+                receita.setTempo(Float.valueOf(tempoDePreparo.getText()));    
+             }
 
             receitaController controllerReceita = new receitaController();
             controllerReceita.cadastrarReceita(receita);

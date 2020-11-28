@@ -69,7 +69,6 @@ public class TelaMostraReceita extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro");
-        setPreferredSize(new java.awt.Dimension(839, 704));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 236, 193));
@@ -105,7 +104,7 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         jLabel5.setText("Rendimento (porções)");
 
         jTextFieldRendimento.setEditable(false);
-        jTextFieldRendimento.setBackground(new java.awt.Color(204, 204, 204));
+        jTextFieldRendimento.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldRendimento.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldRendimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +157,7 @@ public class TelaMostraReceita extends javax.swing.JFrame {
         });
 
         jTextFieldCategoria.setEditable(false);
-        jTextFieldCategoria.setBackground(new java.awt.Color(204, 204, 204));
+        jTextFieldCategoria.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldCategoria.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
